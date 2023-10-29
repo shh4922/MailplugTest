@@ -26,9 +26,9 @@ class BoardListVM: ObservableObject {
     func selectBoard(_ index: Int) {
         /// 현재 게시판 변경
         BoardService.share.board = BoardService.share.boardList?.value[index]
-        
+
+        /// 기존 post 초가화
         BoardService.share.posts = nil
-//        BoardService.share.posts?.value.count = 0
         
         /// 게시판post 변경
         BoardService.share.fetchBoardPostList()

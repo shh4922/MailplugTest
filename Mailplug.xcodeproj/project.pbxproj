@@ -162,7 +162,6 @@
 		00B5AEAA2AE609BC00B20ECA /* Mailplug */ = {
 			isa = PBXGroup;
 			children = (
-				007EF9172AE82458002DDEDB /* CoreData */,
 				00B5AEC72AE62F1A00B20ECA /* Board */,
 				00B5AEAB2AE609BC00B20ECA /* AppDelegate.swift */,
 				00B5AEAD2AE609BC00B20ECA /* SceneDelegate.swift */,
@@ -176,6 +175,7 @@
 		00B5AEC72AE62F1A00B20ECA /* Board */ = {
 			isa = PBXGroup;
 			children = (
+				007EF9172AE82458002DDEDB /* CoreData */,
 				007EF9362AE93475002DDEDB /* custom */,
 				00B5AECC2AE6322A00B20ECA /* extension */,
 				007EF9212AE8390D002DDEDB /* Cell */,

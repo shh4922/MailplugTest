@@ -131,7 +131,6 @@ extension BoardVC {
                 self.tableView.reloadData()
             }
             .store(in: &cancellable)
-        
     }
 }
 
@@ -164,9 +163,7 @@ extension BoardVC {
 
         if offsetY > contentHeight - scrollView.frame.size.height {
             // 스크롤이 테이블 뷰 아래로 도달하면 다음 페이지 로드
-            
-            print("las!!")
-            BoardService.share.fetchBoardPostList()
+            viewmodel.paging()
         }
     }
     

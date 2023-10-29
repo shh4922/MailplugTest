@@ -15,6 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
+        /// fetch 게시판리스트
         BoardService.share.fetchBoardList()
         
         guard let windowScene = (scene as? UIWindowScene) else { return }

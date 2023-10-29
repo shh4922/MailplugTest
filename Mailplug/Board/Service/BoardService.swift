@@ -62,12 +62,9 @@ class BoardService {
                 
                 if self?.posts == nil {
                     self?.posts = decodeData
-                    self?.posts?.offset = decodeData.count
                 }else {
-                    self?.posts?.offset += decodeData.count
                     self?.posts?.value += decodeData.value
                 }
-                
 
             case .failure(let error):
                 print(error.localizedDescription)

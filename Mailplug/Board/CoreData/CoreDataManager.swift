@@ -87,7 +87,6 @@ extension CoreDataManager {
         }
         saveToContext()
         getRecentSearch()
-        
     }
     
     /// delete 최근검색

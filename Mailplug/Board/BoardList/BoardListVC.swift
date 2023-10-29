@@ -47,7 +47,6 @@ class BoardListVC: UIViewController {
         bind()
         addView()
         setConstrain()
-        
     }
     
 }

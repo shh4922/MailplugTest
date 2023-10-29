@@ -21,7 +21,6 @@ class BoardVM: ObservableObject{
             .receive(on: DispatchQueue.main)
             .assign(to: \.currentBoardPosts, on: self)
             .store(in: &cancellable)
-        
     }
     
     /// paging
@@ -30,8 +29,11 @@ class BoardVM: ObservableObject{
         /// limit - 제한 개수
         /// total - 해당 post의 최대 개수
         guard let currentBoardPosts = currentBoardPosts else { return }
-
-        if currentBoardPosts.total > currentBoardPosts.offset + currentBoardPosts.value.count {
+        
+        if currentBoardPosts.total > currentBoardPosts.offset + currentBoardPosts.count {
+            
+            BoardService.share.posts?.offset = BoardService.share.posts?.value.count ?? 0
+            
             BoardService.share.fetchBoardPostList()
         }
     }
